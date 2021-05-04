@@ -36,23 +36,27 @@ headerList=['Availibility Date','Center Name','Zone Name','Pin Code','Fee Type',
 
 valueList=[]
 emptyList=[['na.','na.','na.','na.','na.','na.','na.']]
-for date in date_str:
-    URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(districtID, date)
-    response = requests.get(URL)
-    if response.ok:
-        resp_json = response.json()
-        if resp_json["centers"]:
-            for center in resp_json["centers"]:
-                for session in center["sessions"]:
-                    if session["min_age_limit"] <= minimumAge and int(session["available_capacity"]) > 0:
-                        valueList.append([date, center["name"], center["block_name"], center["pincode"], center["fee_type"], session["available_capacity"], session["vaccine"]])
 
+try:
+	for date in date_str:
+		URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(districtID, date)
+		response = requests.get(URL)
+		if response.ok:
+			resp_json = response.json()
+			if resp_json["centers"]:
+				for center in resp_json["centers"]:
+					for session in center["sessions"]:
+						if session["min_age_limit"] <= minimumAge and int(session["available_capacity"]) > 0:
+							valueList.append([date, center["name"], center["block_name"], center["pincode"], center["fee_type"], session["available_capacity"], session["vaccine"]])
+							
 
-if valueList==[]:
-    df=pd.DataFrame(emptyList)
-else:
-    df=pd.DataFrame(valueList)    
-df.columns=headerList
-
-table=deepcopy(df)
-st.table(table)
+	if valueList==[]:
+		st.error("Could not fetch any records for the selection")
+	else:
+		df=pd.DataFrame(valueList)    
+		df.columns=headerList
+		table=deepcopy(df)
+		st.table(table)
+		
+except:
+	st.error("Unable to fetch data currently, please try after sometime")
