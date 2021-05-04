@@ -25,7 +25,7 @@ district_dict=dict(zip(districts["District_Name"],districts["District_ID"]))
 districtID=district_dict[districtName]
 
 minimumAge = int(st.slider('Select Age', 1, 100, 30))
-checkDuration = int(st.slider('Select Duration', 1, 100, 30))
+checkDuration = int(st.slider('Select Duration(in days)', 1, 100, 30))
 
 #Calculate date range and present in expected format
 date_list = [datetime.datetime.today() + datetime.timedelta(days=x) for x in range(checkDuration)]
@@ -33,9 +33,7 @@ date_str = [x.strftime("%d-%m-%Y") for x in date_list]
 
 
 headerList=['Availibility Date','Center Name','Zone Name','Pin Code','Fee Type','Available Capacity','Vaccine Name']
-
 valueList=[]
-emptyList=[['na.','na.','na.','na.','na.','na.','na.']]
 
 try:
 	for date in date_str:
