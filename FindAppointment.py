@@ -31,11 +31,11 @@ from copy import deepcopy
 # COMMAND ----------
 st.title("Covid vaccination availibility-India")
 
-states = pd.read_csv(r"https://raw.githubusercontent.com/ChandanNayak/Covid/main/state.csv", error_bad_lines=False)
+states = pd.read_csv(r"https://raw.githubusercontent.com/ChandanNayak/CovidVaccination/main/state.csv", error_bad_lines=False)
 state_list= list(states["State_Name"])
 stateName= st.selectbox('Select State',state_list)
 
-districts= pd.read_csv(r"https://raw.githubusercontent.com/ChandanNayak/Covid/main/state-district.csv", error_bad_lines=False)
+districts= pd.read_csv(r"https://raw.githubusercontent.com/ChandanNayak/CovidVaccination/main/state-district.csv", error_bad_lines=False)
 districtsFullList=districts.values.tolist()
 district_list=[]
 for elem in districtsFullList:
