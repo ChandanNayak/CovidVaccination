@@ -1,7 +1,5 @@
-import certifi
 import requests
 import datetime
-import json
 import pandas as pd
 import streamlit as st
 
