@@ -1,7 +1,7 @@
 State_ID,State_Name,District_ID,District_Name
 1,Andaman and Nicobar Islands,1,North and Middle Andaman
-1,Andaman and Nicobar Islands,2,South Andaman
-1,Andaman and Nicobar Islands,3,Nicobar
+1,Karnataka,264,Belgaum
+1,Karnataka,265,Bangalore Urban
 2,Andhra Pradesh,4,Krishna
 2,Andhra Pradesh,6,YSR District, Kadapa (Cuddapah)
 2,Andhra Pradesh,7,Kurnool
@@ -112,14 +112,6 @@ State_ID,State_Name,District_ID,District_Name
 15,Jharkhand,253,Deoghar
 15,Jharkhand,254,Ramgarh
 15,Jharkhand,259,Jamtara
-16,Karnataka,264,Belgaum
-16,Karnataka,265,Bangalore Urban
-16,Karnataka,266,Mysore
-16,Karnataka,270,Bagalkot
-16,Karnataka,276,Bangalore Rural
-16,Karnataka,278,Dharwad
-16,Karnataka,279,Haveri
-16,Karnataka,288,Tumkur
 16,Karnataka,294,BBMP
 17,Kerala,296,Thiruvananthapuram
 17,Kerala,302,Malappuram
@@ -159,15 +151,15 @@ State_ID,State_Name,District_ID,District_Name
 26,Odisha,453,Sundargarh
 26,Odisha,457,Cuttack
 26,Odisha,458,Dhenkanal
-26,Odisha,465,Nuapada
-26,Odisha,466,Subarnapur
-26,Odisha,468,Boudh
-26,Odisha,469,Malkangiri
-26,Odisha,472,Bargarh
-28,Punjab,485,Amritsar
+17,Karnataka,267,Gulbarga
+18,Karnataka,268,Chitradurga
+19,Karnataka,269,Dakshina Kannada
+20,Karnataka,270,Bagalkot
+26,Odisha,293,Vijayapura
+28,Punjab,294,BBMP
 28,Punjab,496,SAS Nagar
 29,Rajasthan,502,Jodhpur
-29,Rajasthan,505,Jaipur I
+21,Karnataka,271,Chamarajanagar
 29,Rajasthan,506,Jaipur II
 29,Rajasthan,509,Sri Ganganagar
 29,Rajasthan,510,Jhunjhunu
@@ -191,11 +183,11 @@ State_ID,State_Name,District_ID,District_Name
 32,Telangana,585,Jangaon
 32,Telangana,588,Kamareddy
 32,Telangana,589,Karimnagar
-32,Telangana,592,Mahabubabad
-32,Telangana,593,Mahabubnagar
-32,Telangana,595,Medak
-32,Telangana,600,Nizamabad
-32,Telangana,601,Peddapalli
+22,Karnataka,272,Bidar
+23,Karnataka,273,Chikamagalur
+24,Karnataka,274,Bellary
+25,Karnataka,275,Davanagere
+26,Karnataka,276,Bangalore Rural
 32,Telangana,603,Rangareddy
 32,Telangana,604,Sangareddy
 32,Telangana,606,Suryapet
@@ -203,11 +195,11 @@ State_ID,State_Name,District_ID,District_Name
 33,Tripura,614,Dhalai
 33,Tripura,620,Unakoti
 33,Tripura,621,West Tripura
-34,Uttar Pradesh,623,Aligarh
-34,Uttar Pradesh,624,Prayagraj
+27,Karnataka,277,Kolar
+28,Karnataka,278,Dharwad
 34,Uttar Pradesh,629,Azamgarh
 34,Uttar Pradesh,634,Ballia
-34,Uttar Pradesh,637,Bareilly
+29,Karnataka,279,Haveri
 34,Uttar Pradesh,639,Bijnour
 34,Uttar Pradesh,650,Gautam Buddha Nagar
 34,Uttar Pradesh,651,Ghaziabad
@@ -220,8 +212,8 @@ State_ID,State_Name,District_ID,District_Name
 34,Uttar Pradesh,676,Meerut
 34,Uttar Pradesh,684,Saharanpur
 34,Uttar Pradesh,696,Varanasi
-35,Uttarakhand,697,Dehradun
-35,Uttarakhand,705,Udham Singh Nagar
+30,Karnataka,280,Gadag
+31,Karnataka,281,Uttar Kannada
 36,West Bengal,713,Birbhum
 36,West Bengal,718,Diamond Harbor HD (S 24 Parganas)
 36,West Bengal,719,East Bardhaman
@@ -243,3 +235,34 @@ State_ID,State_Name,District_ID,District_Name
 11,Gujarat,775,Rajkot Corporation
 11,Gujarat,776,Surat Corporation
 36,West Bengal,783,COOCHBEHAR
+16,Karnataka,270,Bagalkot
+16,Karnataka,276,Bangalore Rural
+16,Karnataka,265,Bangalore Urban
+16,Karnataka,294,BBMP
+16,Karnataka,264,Belgaum
+16,Karnataka,274,Bellary
+16,Karnataka,272,Bidar
+16,Karnataka,271,Chamarajanagar
+16,Karnataka,273,Chikamagalur
+16,Karnataka,291,Chikkaballapur
+16,Karnataka,268,Chitradurga
+16,Karnataka,269,Dakshina Kannada
+16,Karnataka,275,Davanagere
+16,Karnataka,278,Dharwad
+16,Karnataka,280,Gadag
+16,Karnataka,267,Gulbarga
+16,Karnataka,289,Hassan
+16,Karnataka,279,Haveri
+16,Karnataka,283,Kodagu
+16,Karnataka,277,Kolar
+16,Karnataka,282,Koppal
+16,Karnataka,290,Mandya
+16,Karnataka,266,Mysore
+16,Karnataka,284,Raichur
+16,Karnataka,292,Ramanagara
+16,Karnataka,287,Shimoga
+16,Karnataka,288,Tumkur
+16,Karnataka,286,Udupi
+16,Karnataka,281,Uttar Kannada
+16,Karnataka,293,Vijayapura
+16,Karnataka,285,Yadgir
