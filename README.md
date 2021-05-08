@@ -16,6 +16,6 @@ https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?
 1. Download contents into local computer 
 2. Open command prompt.
 3. Navigate to folder where code is stored
-4. run the command <strong>streamlit run covid_app.py</strong>
+4. Run the command <strong>streamlit run covid_app.py</strong>
 
 <strong>Note:</strong> Python 3 is a prerquisite and install required libraries (requests, pandas, streamlit) if not installed already. Syntax- <strong>pip install LibraryName</strong>
