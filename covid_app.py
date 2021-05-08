@@ -1,3 +1,4 @@
+import certifi
 import requests
 import datetime
 import json
@@ -8,11 +9,11 @@ from copy import deepcopy
 
 st.title("Covid vaccination availibility-India")
 
-states = pd.read_csv(r"https://raw.githubusercontent.com/ChandanNayak/Covid/main/state.csv", error_bad_lines=False)
+states = pd.read_csv(r"https://raw.githubusercontent.com/ChandanNayak/CovidVaccination/main/state.csv", error_bad_lines=False)
 state_list= list(states["State_Name"])
 stateName= st.selectbox('Select State',state_list)
 
-districts= pd.read_csv(r"https://raw.githubusercontent.com/ChandanNayak/Covid/main/state-district.csv", error_bad_lines=False)
+districts= pd.read_csv(r"https://raw.githubusercontent.com/ChandanNayak/CovidVaccination/main/state-district.csv", error_bad_lines=False)
 districtsFullList=districts.values.tolist()
 district_list=[]
 for elem in districtsFullList:
@@ -25,7 +26,7 @@ district_dict=dict(zip(districts["District_Name"],districts["District_ID"]))
 districtID=district_dict[districtName]
 
 minimumAge = int(st.slider('Select Age', 1, 100, 30))
-checkDuration = int(st.slider('Select Duration(in days)', 1, 100, 30))
+checkDuration = int(st.slider('Select Duration(in days)', 1, 100, 3))
 
 #Calculate date range and present in expected format
 date_list = [datetime.datetime.today() + datetime.timedelta(days=x) for x in range(checkDuration)]
@@ -38,7 +39,9 @@ valueList=[]
 try:
 	for date in date_str:
 		URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(districtID, date)
-		response = requests.get(URL)
+		session = requests.Session()
+		response = session.get(URL, headers={'User-Agent': 'Chrome/50.0.2661.102 Edge/90.0.818.56'})
+
 		if response.ok:
 			resp_json = response.json()
 			if resp_json["centers"]:
@@ -57,4 +60,4 @@ try:
 		st.table(table)
 		
 except:
-	st.error("Unable to fetch data currently, please try after sometime")
+	st.error("Please try after sometime, Unable to fetch data currently")
